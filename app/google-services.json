@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "587892534399",
+    "firebase_url": "https://startingapp-d36fe.firebaseio.com",
+    "project_id": "startingapp-d36fe",
+    "storage_bucket": "startingapp-d36fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587892534399:android:2fab791240c56a6e",
+        "android_client_info": {
+          "package_name": "com.example.eslam.startingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587892534399-4gp4pdfgporb947vv84jl3cbpvrqr2nh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eslam.startingapp",
+            "certificate_hash": "C36FB6BEA52A4F6C2675BAC1FBAC62011A6BBC3D"
+          }
+        },
+        {
+          "client_id": "587892534399-ae5iu6l2qqdl63r5h0q7eo4gibs1lmkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDday4SQMqN1iUGR5GwuQKAWq97bExrhq4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587892534399-ae5iu6l2qqdl63r5h0q7eo4gibs1lmkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

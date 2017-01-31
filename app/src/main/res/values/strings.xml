@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Wake Up</string>
+    <string name="Piriority">Piriority</string>
+
+    <string-array name="Piriority_arrays">
+        <item name="high">high</item>
+        <item name="high">meduim</item>
+        <item name="high">low</item>
+    </string-array>
+
+</resources>
