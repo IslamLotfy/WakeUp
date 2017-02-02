@@ -1,6 +1,7 @@
 package com.example.eslam.startingapp;
 
 import android.app.IntentService;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -91,12 +92,13 @@ public class MyTestService extends IntentService {
 
         Uri notificationSoundURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder mNotificationBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_notifications_active_white_48dp)
                 .setContentTitle("WakeUp")
                 .setContentText(messageBody)
                 .setAutoCancel(true)
                 .setSound(notificationSoundURI)
-                .setContentIntent(resultIntent);
+                .setContentIntent(resultIntent)
+                .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000});
 
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
