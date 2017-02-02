@@ -15,6 +15,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Random;
+import java.util.UUID;
+
 public class SignUp extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -22,6 +25,8 @@ public class SignUp extends AppCompatActivity {
     private EditText password;
     private EditText password2;
     private Button button;
+    private String code;
+    private EditText conCode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,7 @@ public class SignUp extends AppCompatActivity {
         password=(EditText)findViewById(R.id.pass);
         password2=(EditText)findViewById(R.id.pass2);
         button=(Button) findViewById(R.id.btn);
+        conCode = (EditText) findViewById(R.id.code);
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -46,6 +52,7 @@ public class SignUp extends AppCompatActivity {
                 // ...
             }
         };
+        code = UUID.randomUUID().toString();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,8 +61,21 @@ public class SignUp extends AppCompatActivity {
         });
     }
 
+    public void sendCode() {
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_EMAIL, email.getText());
+        i.putExtra(Intent.EXTRA_SUBJECT, "confirmation code ");
+        i.putExtra(Intent.EXTRA_TEXT, code);
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(SignUp.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
     private void signUp() {
         String mail=email.getText().toString();
+
         String pas=password.getText().toString();
         String con=password2.getText().toString();
         if(!mail.equals(null)&&!pas.equals(null)&&!con.equals(null)){

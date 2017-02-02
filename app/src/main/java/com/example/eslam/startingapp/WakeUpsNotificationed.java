@@ -26,4 +26,10 @@ public class WakeUpsNotificationed extends AppCompatActivity {
             recyclerView.setAdapter(myAdapter);
         }
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        recyclerView.setAdapter(myAdapter);
+    }
 }

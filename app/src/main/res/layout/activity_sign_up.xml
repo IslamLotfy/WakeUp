@@ -39,11 +39,20 @@
             android:inputType="textPassword"
             android:padding="20dp"
             />
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass2"
+            android:hint="confirmation code "
+            android:inputType="textPassword"
+            android:padding="20dp" />
         <Button
             android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pass2"
+            android:layout_below="@+id/code"
             android:padding="20dp"
             android:text="Sign Up"
             android:textSize="20sp" />

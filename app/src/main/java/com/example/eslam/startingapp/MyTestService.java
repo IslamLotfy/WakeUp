@@ -69,13 +69,12 @@ public class MyTestService extends IntentService {
                         System.out.println(wakeUp.getWakeUptitle());
                         cnt++;
                     }
-                    if (cnt > 0) {
-                        createNotification("you have " + cnt + " WakeUps in the next hour !");
-                        System.out.println("notification shouled bs createsed");
-                    }
+                }
+                if (wakeUps.size() > 0) {
+                    createNotification("you have " + wakeUps.size() + " WakeUps in the next hour !");
+                    System.out.println("notification shouled bs createsed");
                 }
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
 

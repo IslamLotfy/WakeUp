@@ -40,16 +40,14 @@ public class Account extends AppCompatActivity {
 
     private void scheduleAlarm() {
         Intent intent = new Intent(getApplicationContext(), MyAlarmReciever.class);
-        final PendingIntent pIntent = PendingIntent.getBroadcast(this, MyAlarmReciever.REQUEST_CODE,
-                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        final PendingIntent pIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         AlarmManager alarmMgr = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.add(Calendar.DAY_OF_YEAR, 1);
         calendar.set(Calendar.HOUR_OF_DAY, 8);
         calendar.set(Calendar.MINUTE, 0);
-        alarmMgr.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                AlarmManager.INTERVAL_HOUR, pIntent);
+        alarmMgr.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                1000 * 60 * 60, pIntent);
     }
 
     @Override

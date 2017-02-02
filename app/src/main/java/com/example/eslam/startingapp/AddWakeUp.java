@@ -112,6 +112,7 @@ public class AddWakeUp extends AppCompatActivity {
                 }
                 child.setValue(wakeUp);
                 Log.d("added to database",child.toString());
+                AddWakeUp.this.finish();
             }
         });
 
