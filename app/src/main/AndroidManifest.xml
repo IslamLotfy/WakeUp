@@ -3,6 +3,7 @@
     package="com.example.eslam.startingapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".StartingApp"
@@ -26,6 +27,26 @@
             android:parentActivityName=".MainActivity" />
         <activity android:name=".AddWakeUp" />
 
+        <service android:name=".MyAndroidFirebaseMsgService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyAndroidFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".MyAlarmReciever"
+            android:process=":remote"></receiver>
+
+        <service
+            android:name=".MyTestService"
+            android:exported="false" />
+
+        <activity android:name=".WakeUpsNotificationed"></activity>
     </application>
 
 </manifest>
