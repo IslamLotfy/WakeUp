@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.eslam.startingapp.Account">
+    tools:context="com.example.eslam.startingapp.WakeUpActivity">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Rview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/buttonColor">
+        android:background="@color/buttonTextColor">
     </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

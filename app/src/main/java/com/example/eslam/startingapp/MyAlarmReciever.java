@@ -16,7 +16,9 @@ public class MyAlarmReciever extends BroadcastReceiver {
     // Triggered by the Alarm periodically (starts the service to run task)
     @Override
     public void onReceive(Context context, Intent intent) {
+
         Intent i = new Intent(context, MyTestService.class);
         context.startService(i);
+
     }
 }

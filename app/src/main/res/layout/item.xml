@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:background="@color/colorPrimary"
+    android:background="@color/authui_colorActivated"
     android:orientation="horizontal"
     android:weightSum="2">
     <LinearLayout
@@ -20,7 +20,7 @@
         android:padding="10dp"
         android:text="Title"
         android:textAlignment="center"
-        android:textColor="@color/bodyTextColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="30sp"
         android:textStyle="bold" />
     <TextView
@@ -31,7 +31,7 @@
         android:padding="10dp"
         android:text="Delrmve'nrv e';rv/lekeuwdnwiluwknwidnwkjen"
         android:textAlignment="center"
-        android:textColor="@color/bodyTextColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="15dp" />
     </LinearLayout>
     <LinearLayout
@@ -47,7 +47,7 @@
         android:padding="10dp"
         android:text="High"
         android:textAlignment="center"
-        android:textColor="@color/bodyTextColor"
+        android:textColor="@color/buttonTextColor"
         android:textSize="20sp" />
     <TextView
         android:id="@+id/dateview"
@@ -57,7 +57,7 @@
         android:padding="10dp"
         android:text="22/2/2017"
         android:textAlignment="center"
-        android:textColor="@color/bodyTextColor"
+        android:textColor="@color/buttonTextColor"
         android:textStyle="italic" />
     <TextView
         android:id="@+id/timeview"
@@ -66,6 +66,6 @@
         android:layout_weight="0.3"
         android:padding="10dp"
         android:textAlignment="center"
-        android:textColor="@color/bodyTextColor" />
+        android:textColor="@color/buttonTextColor" />
     </LinearLayout>
 </LinearLayout>

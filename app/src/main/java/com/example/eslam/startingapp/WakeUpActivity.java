@@ -17,11 +17,10 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.io.Serializable;
 import java.util.Calendar;
 
 
-public class Account extends AppCompatActivity {
+public class WakeUpActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private DatabaseReference databaseReference;
@@ -58,10 +57,10 @@ public class Account extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()==R.id.aciton_add){
-            startActivity(new Intent(Account.this,AddWakeUp.class) );
+            startActivity(new Intent(WakeUpActivity.this, AddWakeUp.class));
         }else if(item.getItemId()==R.id.action_logout){
             auth.logout();
-            startActivity(new Intent(Account.this,MainActivity.class));
+            WakeUpActivity.this.finish();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -77,7 +76,7 @@ public class Account extends AppCompatActivity {
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent=new Intent(Account.this,AddWakeUp.class);
+                        Intent intent = new Intent(WakeUpActivity.this, AddWakeUp.class);
                         intent.putExtra("wakeup",model);
                         startActivity(intent);
                     }

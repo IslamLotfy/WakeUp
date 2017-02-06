@@ -15,7 +15,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import java.util.Random;
 import java.util.UUID;
 
 public class SignUp extends AppCompatActivity {
@@ -44,7 +43,7 @@ public class SignUp extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     // Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    startActivity(new Intent(SignUp.this,Account.class));
+                    startActivity(new Intent(SignUp.this, WakeUpActivity.class));
                 } else {
                     // User is signed out
                     //Log.d(TAG, "onAuthStateChanged:signed_out");
@@ -87,9 +86,7 @@ public class SignUp extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     //Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
                                     Toast.makeText(SignUp.this, "now log in", Toast.LENGTH_LONG).show();
-                                    // If sign in fails, display a message to the user. If sign in succeeds
-                                    // the auth state listener will be notified and logic to handle the
-                                    // signed in user can be handled in the listener.
+
                                     if (!task.isSuccessful()) {
                                         Toast.makeText(SignUp.this, "re inter the email and password please!", Toast.LENGTH_LONG).show();
                                     }

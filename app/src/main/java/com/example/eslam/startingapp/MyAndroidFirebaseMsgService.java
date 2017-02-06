@@ -1,9 +1,7 @@
 package com.example.eslam.startingapp;
 
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
@@ -30,7 +28,7 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
     }
 
     private void createNotification(String messageBody) {
-        Intent intent = new Intent(this, Account.class);
+        Intent intent = new Intent(this, WakeUpActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent resultIntent = PendingIntent.getActivity(this, 0, intent,
                 PendingIntent.FLAG_ONE_SHOT);
