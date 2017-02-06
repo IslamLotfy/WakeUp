@@ -99,7 +99,7 @@ public class SignUp extends AppCompatActivity {
 
                 }
             }else{
-                Toast.makeText(SignUp.this,"re inter the password please!",Toast.LENGTH_LONG).show();
+                Toast.makeText(SignUp.this, "re-type the password please!", Toast.LENGTH_LONG).show();
             }
         }else{
             Toast.makeText(SignUp.this,"fill the mail and password field !",Toast.LENGTH_LONG).show();

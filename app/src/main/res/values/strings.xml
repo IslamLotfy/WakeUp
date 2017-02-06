@@ -4,7 +4,7 @@
 
     <string-array name="Piriority_arrays">
         <item name="high">high</item>
-        <item name="high">meduim</item>
+        <item name="high">medium</item>
         <item name="high">low</item>
     </string-array>
 
